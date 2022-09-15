@@ -1,0 +1,426 @@
+{
+  "version": "2",
+  "templates": [
+    {
+      "type": 3,
+      "name": "Fastlane [PROD]",
+      "title": "Fastlane [PROD]",
+      "description": "Production instance of Fastlane",
+      "note": "This action will install a production instance of Fastlane to the selected Portainer environment",
+      "categories": [
+        "fastlane"
+      ],
+      "platform": "linux",
+      "logo": "https://cdn.iatric.com/5/images/fastlane.svg",
+      "repository": {
+        "url": "https://github.com/iatricwillhunter/bf560d90-887b-4792-ab86-eaf30b9873e2",
+        "stackfile": "stacks/fastlane/docker-compose.yml"
+      },
+      "env": [
+        {
+          "name": "ENVIRONMENT",
+          "default": "prod",
+          "preset": true
+        },
+        {
+          "name": "VERSION",
+          "label": "Version",
+          "select": [
+            {
+              "text": "latest",
+              "value": "latest",
+              "default": true
+            }
+          ]
+        },
+        {
+          "name": "SITE_CODE",
+          "label": "Site Code",
+          "default": "",
+          "description": "iConnect site code"
+        },
+        {
+          "name": "SERVER_HOSTNAME",
+          "label": "Appliance Hostname/IP",
+          "default": "",
+          "description": "Fully qualified domain name or IP address of server."
+        },
+        {
+          "name": "TOKEN_SECRET",
+          "label": "Token Secret",
+          "default": "",
+          "description": "Value used to encrypt Fastlane authentication tokens.  Suggest using a strong password generator."
+        },
+        {
+          "name": "APP_PORT",
+          "default": "43400",
+          "preset": true
+        },
+        {
+          "name": "FASTLANE_PORT",
+          "default": "43400",
+          "preset": true
+        },
+        {
+          "name": "MYSQL_USER",
+          "label": "DB Username",
+          "default": "fastlane",
+          "description": "Fastlane database user"
+        },
+        {
+          "name": "MYSQL_PASSWORD",
+          "label": "DB Password",
+          "description": "Fastlane database user password"
+        }
+      ]
+    },
+    {
+      "type": 3,
+      "name": "Fastlane [TEST]",
+      "title": "Fastlane [TEST]",
+      "description": "Test instance of Fastlane",
+      "note": "This action will install a test instance of Fastlane to the selected Portainer environment",
+      "categories": [
+        "fastlane"
+      ],
+      "platform": "linux",
+      "logo": "https://cdn.iatric.com/5/images/fastlane.svg",
+      "repository": {
+        "url": "https://github.com/iatricwillhunter/bf560d90-887b-4792-ab86-eaf30b9873e2",
+        "stackfile": "stacks/fastlane/docker-compose.yml"
+      },
+      "env": [
+        {
+          "name": "ENVIRONMENT",
+          "default": "test",
+          "preset": true
+        },
+        {
+          "name": "VERSION",
+          "label": "Version",
+          "select": [
+            {
+              "text": "latest",
+              "value": "latest",
+              "default": true
+            }
+          ]
+        },
+        {
+          "name": "SITE_CODE",
+          "label": "Site Code",
+          "default": "",
+          "description": "iConnect site code"
+        },
+        {
+          "name": "SERVER_HOSTNAME",
+          "label": "Appliance Hostname/IP",
+          "default": "",
+          "description": "Fully qualified domain name or IP address of server."
+        },
+        {
+          "name": "TOKEN_SECRET",
+          "label": "Token Secret",
+          "default": "",
+          "description": "Value used to encrypt Fastlane authentication tokens.  Suggest using a strong password generator."
+        },
+        {
+          "name": "APP_PORT",
+          "default": "43200",
+          "preset": true
+        },
+        {
+          "name": "FASTLANE_PORT",
+          "default": "43200",
+          "preset": true
+        },
+        {
+          "name": "MYSQL_USER",
+          "label": "DB Username",
+          "default": "fastlane",
+          "description": "Fastlane database user"
+        },
+        {
+          "name": "MYSQL_PASSWORD",
+          "label": "DB Password",
+          "description": "Fastlane database user password"
+        }
+      ]
+    },
+    {
+      "type": 3,
+      "name": "Smartboard Vision [PROD]",
+      "title": "Smartboard Vision [PROD]",
+      "description": "Production instance of Smartboard Vision",
+      "note": "This action will install a production instance of Smartboard Vision to the selected Portainer environment.<br /><br />\"Token Secret\" ***MUST*** match the equivalent value of the associated Fastlane instance.",
+      "categories": [
+        "smartboard vision"
+      ],
+      "platform": "linux",
+      "logo": "https://cdn.iatric.com/5/images/smartboard-vision.png",
+      "repository": {
+        "url": "https://github.com/iatricwillhunter/bf560d90-887b-4792-ab86-eaf30b9873e2",
+        "stackfile": "stacks/smartboard-vision/docker-compose.yml"
+      },
+      "env": [
+        {
+          "name": "ENVIRONMENT",
+          "default": "prod",
+          "preset": true
+        },
+        {
+          "name": "VERSION",
+          "label": "Version",
+          "select": [
+            {
+              "text": "latest",
+              "value": "latest",
+              "default": true
+            }
+          ]
+        },
+        {
+          "name": "SITE_CODE",
+          "label": "Site Code",
+          "default": "",
+          "description": "iConnect site code"
+        },
+        {
+          "name": "SERVER_HOSTNAME",
+          "label": "Appliance Hostname/IP",
+          "default": "",
+          "description": "Fully qualified domain name or IP address of server."
+        },
+        {
+          "name": "TOKEN_SECRET",
+          "label": "Token Secret",
+          "default": "",
+          "description": "Value used to encrypt Fastlane authentication tokens.  Suggest using a strong password generator."
+        },
+        {
+          "name": "APP_PORT",
+          "default": "43401",
+          "preset": true
+        },
+        {
+          "name": "FASTLANE_PORT",
+          "default": "43400",
+          "preset": true
+        },
+        {
+          "name": "MONGO_INITDB_ROOT_USERNAME",
+          "label": "DB Username",
+          "default": "MongoUser",
+          "description": "Smartboard Vision database user"
+        },
+        {
+          "name": "MONGO_INITDB_ROOT_PASSWORD",
+          "label": "DB Password",
+          "description": "Smartboard Vision database user password"
+        }
+      ]
+    },
+    {
+      "type": 3,
+      "name": "Smartboard Vision [TEST]",
+      "title": "Smartboard Vision [TEST]",
+      "description": "Test instance of Smartboard Vision",
+      "note": "This action will install a test instance of Smartboard Vision to the selected Portainer environment.<br /><br />\"Token Secret\" ***MUST*** match the equivalent value of the associated Fastlane instance.",
+      "categories": [
+        "smartboard vision"
+      ],
+      "platform": "linux",
+      "logo": "https://cdn.iatric.com/5/images/smartboard-vision.png",
+      "repository": {
+        "url": "https://github.com/iatricwillhunter/bf560d90-887b-4792-ab86-eaf30b9873e2",
+        "stackfile": "stacks/smartboard-vision/docker-compose.yml"
+      },
+      "env": [
+        {
+          "name": "ENVIRONMENT",
+          "default": "test",
+          "preset": true
+        },
+        {
+          "name": "VERSION",
+          "label": "Version",
+          "select": [
+            {
+              "text": "latest",
+              "value": "latest",
+              "default": true
+            }
+          ]
+        },
+        {
+          "name": "SITE_CODE",
+          "label": "Site Code",
+          "default": "",
+          "description": "iConnect site code"
+        },
+        {
+          "name": "SERVER_HOSTNAME",
+          "label": "Appliance Hostname/IP",
+          "default": "",
+          "description": "Fully qualified domain name or IP address of server."
+        },
+        {
+          "name": "TOKEN_SECRET",
+          "label": "Token Secret",
+          "default": "",
+          "description": "Value used to encrypt Fastlane authentication tokens.  Suggest using a strong password generator."
+        },
+        {
+          "name": "APP_PORT",
+          "default": "43201",
+          "preset": true
+        },
+        {
+          "name": "FASTLANE_PORT",
+          "default": "43200",
+          "preset": true
+        },
+        {
+          "name": "MONGO_INITDB_ROOT_USERNAME",
+          "label": "DB Username",
+          "default": "MongoUser",
+          "description": "Smartboard Vision database user"
+        },
+        {
+          "name": "MONGO_INITDB_ROOT_PASSWORD",
+          "label": "DB Password",
+          "description": "Smartboard Vision database user password"
+        }
+      ]
+    },
+    {
+      "type": 3,
+      "name": "Sedona LMS [PROD]",
+      "title": "Sedona LMS [PROD]",
+      "description": "Production instance of Sedona LMS",
+      "note": "This action will install a production instance of Sedona LMS to the selected Portainer environment",
+      "categories": [
+        "lms"
+      ],
+      "platform": "linux",
+      "logo": "https://cdn.iatric.com/5/images/fastlane.svg",
+      "repository": {
+        "url": "https://github.com/iatricwillhunter/bf560d90-887b-4792-ab86-eaf30b9873e2",
+        "stackfile": "stacks/sedona-lms/docker-compose.yml"
+      },
+      "env": [
+        {
+          "name": "ENVIRONMENT",
+          "default": "prod",
+          "preset": true
+        },
+        {
+          "name": "VERSION",
+          "label": "Version",
+          "select": [
+            {
+              "text": "latest",
+              "value": "latest",
+              "default": true
+            }
+          ]
+        },
+        {
+          "name": "SITE_CODE",
+          "label": "Site Code",
+          "default": "",
+          "description": "iConnect site code"
+        },
+        {
+          "name": "SERVER_HOSTNAME",
+          "label": "Appliance Hostname/IP",
+          "default": "",
+          "description": "Fully qualified domain name or IP address of server."
+        },
+        {
+          "name": "TOKEN_SECRET",
+          "label": "Token Secret",
+          "default": "",
+          "description": "Value used to encrypt Sedona LMS authentication tokens.  Suggest using a strong password generator."
+        },
+        {
+          "name": "APP_PORT",
+          "default": "43414",
+          "preset": true
+        },
+        {
+          "name": "FASTLANE_PORT",
+          "default": "43400",
+          "preset": true
+        },
+        {
+          "name": "MYSQL_USER",
+          "label": "DB Username",
+          "default": "fastlane",
+          "description": "Sedona LMS database user"
+        },
+        {
+          "name": "MYSQL_PASSWORD",
+          "label": "DB Password",
+          "description": "Sedona LMS database user password"
+        }
+      ]
+    },
+ {
+      "type": 3,
+      "name": "JamieTestWebsite [TEST]",
+      "title": "JamieTestWebsite [TEST]",
+      "description": "Test instance of CSS Website on Apache",
+      "note": "This action will install a test instance of CSS website to the selected Portainer environment",
+      "categories": [
+        "website"
+      ],
+      "platform": "linux",
+      "logo": "https://cdn.iatric.com/5/images/fastlane.svg",
+      "repository": {
+        "url": "http://192.168.1.150/portainer",
+        "stackfile": "stacks/website/docker-compose.yml"
+      },
+      "env": [
+        {
+          "name": "ENVIRONMENT",
+          "default": "test",
+          "preset": true
+        },
+        {
+          "name": "VERSION",
+          "label": "Version",
+          "select": [
+            {
+              "text": "latest",
+              "value": "latest",
+              "default": true
+            }
+          ]
+        },
+        {
+          "name": "SITE_CODE",
+          "label": "Site Code",
+          "default": "",
+          "description": "iConnect site code"
+        },
+        {
+          "name": "SERVER_HOSTNAME",
+          "label": "Appliance Hostname/IP",
+          "default": "",
+          "description": "Fully qualified domain name or IP address of server."
+        },
+             {
+          "name": "APP_PORT",
+          "default": "43400",
+          "preset": true
+        },
+        {
+          "name": "FASTLANE_PORT",
+          "default": "43400",
+          "preset": true
+        }
+      ]
+    }	
+  ]
+}
